@@ -13,15 +13,15 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { BaseComponent } from "./../../component.js";
+import { BaseComponent } from './../../component.js';
 var TodoComponent = (function (_super) {
     __extends(TodoComponent, _super);
     function TodoComponent(title, todo) {
-        var _this = _super.call(this, "\n      <section class=\"todo\">\n        <h2 class=\"todo__title\"></h2>\n        <input type=\"checkbox\" class=\"todo-checkbox\">\n      </section>\n      ") || this;
-        var titleElement = _this.element.querySelector(".todo__title");
+        var _this = _super.call(this, "\n      <section class=\"todo\">\n        <h2 class=\"page-item__title todo__title\"></h2>  \n        <input type=\"checkbox\" id=\"todo-checkbox\"/>\n        <label for=\"todo-checkbox\" class=\"todo-label\"></label>      </section>\n      ") || this;
+        var titleElement = _this.element.querySelector('.todo__title');
         titleElement.textContent = title;
-        var todoElement = _this.element.querySelector(".todo-checkbox");
-        todoElement.insertAdjacentText("afterend", todo);
+        var todoElement = _this.element.querySelector('.todo-label');
+        todoElement.textContent = todo;
         return _this;
     }
     return TodoComponent;

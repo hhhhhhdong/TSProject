@@ -13,14 +13,14 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { BaseComponent } from "./../../component.js";
+import { BaseComponent } from './../../component.js';
 var VideoComponent = (function (_super) {
     __extends(VideoComponent, _super);
     function VideoComponent(title, url) {
-        var _this = _super.call(this, "\n        <section class=\"video\">\n            <div class=\"video__player\"><iframe class=\"video__iframe\"></iframe></div>\n            <h3 class=\"video__title\"></h3>\n        </section>\n        ") || this;
-        var iframe = _this.element.querySelector(".video__iframe");
+        var _this = _super.call(this, "\n        <section class=\"video\">\n            <div class=\"video__player\"><iframe class=\"video__iframe\"></iframe></div>\n            <h3 class=\"page-item__title video__title\"></h3>\n        </section>\n        ") || this;
+        var iframe = _this.element.querySelector('.video__iframe');
         iframe.src = _this.convertToEmbeddedURL(url);
-        var titleElement = _this.element.querySelector(".video__title");
+        var titleElement = _this.element.querySelector('.video__title');
         titleElement.textContent = title;
         return _this;
     }

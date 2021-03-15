@@ -13,14 +13,14 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { BaseComponent } from "./../../component.js";
+import { BaseComponent } from './../../component.js';
 var NoteComponent = (function (_super) {
     __extends(NoteComponent, _super);
     function NoteComponent(title, body) {
-        var _this = _super.call(this, "\n      <section class=\"note\">\n        <h2 class=\"note__title\"></h2>\n        <p class=\"note__body\"></p>\n      </section>\n      ") || this;
-        var titleElement = _this.element.querySelector(".note__title");
+        var _this = _super.call(this, "\n      <section class=\"note\">\n        <h2 class=\"page-item__title note__title\"></h2>\n        <p class=\"note__body\"></p>\n      </section>\n      ") || this;
+        var titleElement = _this.element.querySelector('.note__title');
         titleElement.textContent = title;
-        var bodyElement = _this.element.querySelector(".note__body");
+        var bodyElement = _this.element.querySelector('.note__body');
         bodyElement.textContent = body;
         return _this;
     }
