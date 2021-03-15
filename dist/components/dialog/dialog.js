@@ -13,17 +13,17 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { BaseComponent } from './../component.js';
+import { BaseComponent } from "./../component.js";
 var InputDialog = (function (_super) {
     __extends(InputDialog, _super);
     function InputDialog() {
         var _this = _super.call(this, "\n    <dialog class=\"dialog\">\n      <div class=\"dialog__container\">\n        <button class=\"close\">&times;</button>\n        <div id=\"dialog__body\"></div>\n        <button class=\"dialog__submit\">ADD</button>\n      </div>\n    </dialog>\n    ") || this;
-        var closeBtn = _this.element.querySelector('.close');
-        closeBtn.addEventListener('click', function () {
+        var closeBtn = _this.element.querySelector(".close");
+        closeBtn.addEventListener("click", function () {
             _this.closeListener && _this.closeListener();
         });
-        var submitBtn = _this.element.querySelector('.dialog__submit');
-        submitBtn.addEventListener('click', function () {
+        var submitBtn = _this.element.querySelector(".dialog__submit");
+        submitBtn.addEventListener("click", function () {
             _this.submitListener && _this.submitListener();
         });
         return _this;
@@ -35,7 +35,7 @@ var InputDialog = (function (_super) {
         this.submitListener = listener;
     };
     InputDialog.prototype.addChild = function (child) {
-        var body = this.element.querySelector('#dialog__body');
+        var body = this.element.querySelector("#dialog__body");
         child.attachTo(body);
     };
     return InputDialog;
